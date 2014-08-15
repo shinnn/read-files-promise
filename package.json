@@ -1,0 +1,46 @@
+{
+  "name": "read-files-promise",
+  "version": "0.0.0",
+  "description": "Promise to read multiple files",
+  "repository": "shinnn/read-files-promise",
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "scripts": {
+    "pretest": "eslint *.js test/test.js & jscs *.js test/test.js",
+    "test": "tape test/test.js | tap-spec"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/read-files-promise/blob/master/LICENSE"
+    }
+  ],
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "keywords": [
+    "fs",
+    "read",
+    "file",
+    "files",
+    "multiple",
+    "promise",
+    "promises",
+    "then",
+    "thenable"
+  ],
+  "dependencies": {
+    "es6-promise": "^1.0.0",
+    "fs-readfile-promise": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.7.4",
+    "jscs": "^1.5.9",
+    "require-main": "^0.1.1",
+    "tap-spec": "^0.2.0",
+    "tape": "^2.14.0"
+  }
+}
