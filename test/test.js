@@ -5,20 +5,20 @@ var path = require('path');
 var test = require('tape');
 var readFiles = require('require-main')();
 
-var fixturePaths = {
-  a: path.join(__dirname, 'fixture_a.txt'),
-  b: path.join(__dirname, 'fixture_b.txt')
-};
+var fixturePaths = [
+  path.join(__dirname, 'fixture_b.txt'),
+  path.join(__dirname, 'fixture_a.txt')
+];
 
 test('fsReadFilePromise()', function(t) {
   t.plan(5);
 
-  readFiles([fixturePaths.a, fixturePaths.b])
+  readFiles([fixturePaths[0]])
   .then(function(bufs) {
-    t.equal(bufs[0].toString(), 'a\n', 'should read a file.');
+    t.equal(bufs[0].toString(), 'b\n', 'should read a file.');
   });
 
-  readFiles([fixturePaths.b, fixturePaths.a])
+  readFiles(fixturePaths)
   .then(function(bufs) {
     t.deepEqual(
       [bufs[0].toString(), bufs[1].toString()],
