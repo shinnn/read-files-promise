@@ -1,6 +1,5 @@
-# read-files-promise 
+# read-files-promise
 
-[![NPM version](https://badge.fury.io/js/read-files-promise.svg)](https://www.npmjs.org/package/read-files-promise)
 [![Build Status](https://travis-ci.org/shinnn/read-files-promise.svg?branch=master)](https://travis-ci.org/shinnn/read-files-promise)
 [![Build status](https://ci.appveyor.com/api/projects/status/2ejpbpkek67wdosf)](https://ci.appveyor.com/project/ShinnosukeWatanabe/read-files-promise)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/read-files-promise.svg)](https://coveralls.io/r/shinnn/read-files-promise)
@@ -26,6 +25,8 @@ readFiles([
 If you want to read a single file in the way of promise, use [fs-readfile-promise](https://github.com/shinnn/fs-readfile-promise).
 
 ## Installation
+
+[![NPM version](https://badge.fury.io/js/read-files-promise.svg)](https://www.npmjs.org/package/read-files-promise)
 
 [Install with npm](https://www.npmjs.org/doc/cli/npm-install.html). (Make sure you have installed [Node](http://nodejs.org/))
 
@@ -74,6 +75,6 @@ function onRejected(err) {
 
 Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
 
-Licensed under [the MIT LIcense](./LICENSE).
+Licensed under [the MIT License](./LICENSE).
 
 [promise]: http://promisesaplus.com/
