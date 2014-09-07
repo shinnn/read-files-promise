@@ -2,6 +2,8 @@
 
 [![NPM version](https://badge.fury.io/js/read-files-promise.svg)](https://www.npmjs.org/package/read-files-promise)
 [![Build Status](https://travis-ci.org/shinnn/read-files-promise.svg?branch=master)](https://travis-ci.org/shinnn/read-files-promise)
+[![Build status](https://ci.appveyor.com/api/projects/status/2ejpbpkek67wdosf)](https://ci.appveyor.com/project/ShinnosukeWatanabe/read-files-promise)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/read-files-promise.svg)](https://coveralls.io/r/shinnn/read-files-promise)
 [![Dependency Status](https://david-dm.org/shinnn/read-files-promise.svg)](https://david-dm.org/shinnn/read-files-promise)
 [![devDependency Status](https://david-dm.org/shinnn/read-files-promise/dev-status.svg)](https://david-dm.org/shinnn/read-files-promise#info=devDependencies)
 
