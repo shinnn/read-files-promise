@@ -9,7 +9,7 @@
   },
   "scripts": {
     "pretest": "eslint *.js test/test.js & jscs *.js test/test.js",
-    "test": "tape test/test.js | tap-spec",
+    "test": "node test/test.js | tap-spec",
     "coverage": "istanbul cover test/test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
