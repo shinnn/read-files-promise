@@ -14,11 +14,9 @@ var readFiles = require('read-files-promise');
 readFiles([
   'path/to/file0', // 'apple'
   'path/to/file1', // 'orange'
-])
+], {encoding: 'utf8'})
 .then(function(buffers) {
-  console.log(buffers.map(function(buffer) {
-    return buffer.toString();
-  })); // yields: ['apple', 'orange']
+  buffers; //=> ['apple', 'orange']
 });
 ```
 
@@ -30,7 +28,7 @@ If you want to read a single file in the way of promise, use [fs-readfile-promis
 
 [Use npm.](https://docs.npmjs.com/cli/install)
 
-```
+```sh
 npm install read-files-promise
 ```
 
@@ -42,15 +40,15 @@ var readFiles = require('read-files-promise');
 
 ### readFiles(*filenames* [, *options*])
 
-*filenames*: `Array` of `String`  
+*filenames*: `Array` of `String` (file paths)  
 *options*: `Object` or `String` (same as [fs.readFile](http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback)'s second argument)  
 Return: `Object` ([Promise][promise])
 
 It reads the files specified in its first argument.
 
-When it finish reading the all files, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with an array of [`Buffer`](http://nodejs.org/api/buffer.html#buffer_buffer) (the contents of files) as its first argument.
+When it finish reading all the files, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with an array of the contents as its first argument. The order of the contents depends on the order of file paths.
 
-When it fails to read the file, it will be [*rejected*](http://promisesaplus.com/#point-30) with an error as its first argument.
+When it fails to read at least one of the files, it will be [*rejected*](http://promisesaplus.com/#point-30) with an error as its first argument.
 
 ```javascript
 
@@ -63,7 +61,7 @@ readFiles([
 ]).then(onFulfilled, onRejected);
 
 function onFulfilled(buffers) {
-  console.log.apply(null, buffers); // yields: <Buffer 61> <Buffer 62> <Buffer 63>
+  buffers; //=> [<Buffer 61>, <Buffer 62>, <Buffer 63>]
 };
 
 function onRejected(err) {
