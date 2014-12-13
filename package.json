@@ -35,8 +35,8 @@
     "thenable"
   ],
   "dependencies": {
-    "es6-promise": "^2.0.0",
-    "fs-readfile-promise": "^1.0.1"
+    "read-multiple-files": "^1.0.0",
+    "wrap-promise": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^0.8.2",
