@@ -8,7 +8,7 @@
     "url": "https://github.com/shinnn"
   },
   "scripts": {
-    "pretest": "eslint *.js & jscs *.js",
+    "pretest": "eslint *.js && jscs *.js",
     "test": "node test.js | tap-spec",
     "coverage": "istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
@@ -45,5 +45,10 @@
     "jscs": "^1.7.3",
     "tap-spec": "^1.0.1",
     "tape": "^3.0.1"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98,
+    "validateLineBreaks": "LF"
   }
 }
