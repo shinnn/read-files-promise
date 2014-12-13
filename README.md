@@ -31,7 +31,7 @@ If you want to read a single file in the way of promise, use [fs-readfile-promis
 [Use npm.](https://docs.npmjs.com/cli/install)
 
 ```
-npm install --save read-files-promise
+npm install read-files-promise
 ```
 
 ## API
@@ -42,8 +42,8 @@ var readFiles = require('read-files-promise');
 
 ### readFiles(*filenames* [, *options*])
 
-*filenames*: array of `String`  
-*options*: `Object` (same as [fs.readFile](http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback) option)  
+*filenames*: `Array` of `String`  
+*options*: `Object` or `String` (same as [fs.readFile](http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback)'s second argument)  
 Return: `Object` ([Promise][promise])
 
 It reads the files specified in its first argument.
