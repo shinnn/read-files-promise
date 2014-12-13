@@ -26,9 +26,9 @@ If you want to read a single file in the way of promise, use [fs-readfile-promis
 
 ## Installation
 
-[![NPM version](https://badge.fury.io/js/read-files-promise.svg)](https://www.npmjs.org/package/read-files-promise)
+[![NPM version](https://badge.fury.io/js/read-files-promise.svg)](https://www.npmjs.com/package/read-files-promise)
 
-[Install with npm](https://www.npmjs.org/doc/cli/npm-install.html). (Make sure you have installed [Node](http://nodejs.org/))
+[Use npm.](https://docs.npmjs.com/cli/install)
 
 ```
 npm install --save read-files-promise
