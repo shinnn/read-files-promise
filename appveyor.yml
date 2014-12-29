@@ -1,6 +1,8 @@
 init:
   - git config --global core.autocrlf input
 
+shallow_clone: true
+
 version: '{build}'
 
 environment:
@@ -9,11 +11,15 @@ environment:
     - nodejs_version: '0.11'
 
 install:
-  - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version)
-  - npm install
+  - ps: Install-Product node $env:nodejs_version
+  - npm install --production
+  - npm install tape
 
 build: off
 
 test_script:
   - ps: node test.js
   - cmd: node test.js
+
+cache:
+  - node_modules
